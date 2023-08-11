@@ -1,0 +1,124 @@
+1. SpringBoot:
+
+- Spring Boot is an open-source Java-based framework used to create standalone, production-grade Spring-based applications with minimal configuration. 
+
+- It provides a set of pre-configured dependencies and auto-configuration modules that eliminate the need for boilerplate code, making it easier and faster to create applications.
+
+
+for ref:
+
+{
+- Class: It is a blueprint or template for creating objects with specific properties and behaviors.
+
+- Repo (Repository): It is a component responsible for data access and database operations.
+
+- Service: It is a component responsible for business logic and providing specific functionalities to the application.
+
+- Controller: It is a component responsible for handling HTTP requests and generating HTTP responses, typically used in web applications.
+
+- Http : Hypertext transfer protocol. its candling crud operarions.
+
+- pom.xml - This contains all the dependencies needed to build this project
+
+}
+
+2. Advantages of SpringBoot:
+
+- Faster Development: Spring Boot reduces repetitive code, so developers can focus on building business logic quickly.
+
+- Ready for Production: It comes with many ready-to-use features, like security and monitoring, making it suitable for real-world applications.
+
+- Microservices Friendly: Spring Boot is perfect for creating small, independent services that work well together.
+
+- Easy Integration: It easily integrates with other Spring modules and external libraries, making it versatile and adaptable.
+
+3. Spring Boot handle database connections? //in a springboot h2 database is embedded.
+ 
+
+- Spring Boot provides a set of auto-configuration modules that make it easy to connect to databases. By default, it supports several popular databases like MySQL, PostgreSQL, and MongoDB. 
+
+4. What is the difference between Spring Boot and Spring MVC?
+
+- Spring Boot: A ready-to-use framework on top of Spring that simplifies setting up and running applications with pre-configurations.
+
+- Spring Framework: A modular Java framework for building enterprise applications, providing features like Dependency Injection, Inversion of Control, AOP, and more.
+
+- Spring MVC: A part of the Spring Framework for building web applications and RESTful services using the model-view-controller pattern.
+
+
+5. SpringBoot Architecture:
+
+- Presentation Layer – Authentication & Json Translation
+
+- Business Layer – Business Logic, Validation & Authorization
+
+- Persistence Layer – Storage Logic
+
+- Database Layer – Actual Database
+
+6. What is Annotation and why we use Anotation?
+
+- Annotation is a special kind of metadata in Java. It starts with the @ symbol and is used to provide additional information about code elements, like classes or methods.
+
+- We use annotations to give instructions or hints to the compiler, runtime, or other tools about how to handle our code. They help in configuration, documentation, testing, and integrating with frameworks, making coding tasks easier and more efficient.
+
+7. @springboot applications = @configuration + @EnableAutoconfigurtion + @componentscan
+
+@SpringBootApplication is a combination of three annotations:
+
+- @Configuration: Marks the class as a configuration class for Spring Boot.
+
+- @EnableAutoConfiguration: Enables automatic configuration of the application based on the classpath and dependencies.
+
+- @ComponentScan: Scans for Spring components like controllers, services, and repositories in the specified package.
+
+When you use @SpringBootApplication in your Spring Boot application's main class, it acts as a central configuration point, enabling auto-configuration and component scanning, which simplifies the setup and running of the application.
+
+
+8. Server:
+
+- Spring Boot supports embedded web servers, which means the server is built into your application. 
+The main ones are Tomcat, Jetty, and Undertow. You can easily switch between them or use an external server if needed.
+
+
+9. Monolithic and Microservice:
+
+- Monolithic systems can be difficult to maintain and scale since any change or update may affect the entire application.(all services run in one container; suppose one service is not working, our application breakdown)
+
+- Microservices are collection of independent services communicate through Api's.
+
+- Microservices enable better flexibility, scalability, and maintainability for complex and large-scale applications. (Ex: amazon,flipcart payment sys, order,cart).
+
+
+
+10. @Data:  It automatically generates common methods like getters, setters, equals(), hashCode(), and toString() for class fields, making the code cleaner and more concise.
+
+11. @AllArgsConstructor: It creates a constructor that accepts all the class's fields as arguments, allowing easy initialization of objects with all data.
+
+12. @NoArgsConstructor: It generates a constructor without any arguments, making it convenient to create objects with default values.
+
+13. @Entity: It marks a class as a representation of a database table, enabling the object's instances to be saved and retrieved from the database.
+
+             - map the application's data to the corresponding database tables or data sources. 
+
+14. @Service: annotation is used to indicate that a particular class is a service component.
+
+15. @Autowired: is an annotation in Spring used to automatically inject (provide) dependencies (other objects or services) into a class, so you don't have to create or find them manually.
+
+16. @RestController is used to create a special type of controller in Spring that is specifically designed for building web APIs, particularly RESTful APIs. It automatically handles converting the data returned from methods into the appropriate format (like JSON) to send as a response to clients.
+
+17. Optional: improves code readability and reduces the chances of introducing null pointer exceptions
+
+18. @RequestBody : applied to the record parameter of the createRecord method in post method.
+
+19. @RequestParm : applied to the id parameter of the getUserById method in a get method.
+
+20. @PathVariable : applied to the id parameter of the getUserById method.
+
+21. Dependency :
+
+(i) spring-boot-starter-web -  handling HTTP requests, defining controllers, managing views - embedded Tomcat web server.
+
+(ii) spring-boot-devtools - HTML, CSS, and JavaScript - pplication.properties or application.yml.
+
+(iii) spring-boot-starter-data-jpa - can configure the database connection properties (e.g., URL, username, password) in your application properties file (e.g., application.properties or application.yml) to connect to the desired database.

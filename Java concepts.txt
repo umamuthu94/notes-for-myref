@@ -1,0 +1,35 @@
+Java:
+
+Constructor:
+
+- A constructor is a special method in a class that automatically runs when an object is created, used to set up initial values.
+
+- It has the same name as the class and is responsible for object initialization.
+
+Ex:
+
+    public class Person {
+    String name;
+    int age;
+
+    // Constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method to display person's details
+    public void displayDetails() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+
+    public static void main(String[] args) {
+        // Creating a Person object using the constructor
+        Person person1 = new Person("John", 30);
+
+        // Displaying person's details
+        person1.displayDetails(); // Output: Name: John, Age:30 
+    }
+}
+
+

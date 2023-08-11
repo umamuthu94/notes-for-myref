@@ -1,0 +1,3 @@
+Microservoices:
+
+Microservices is an architectural style where complex applications are broken down into small, independent services that communicate through APIs.

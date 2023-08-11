@@ -1,0 +1,170 @@
+
+Java - run commends : compile : java c classname.java || run : java classname
+
+
+
+1. datatypes : primitive: int, float, byte, double, long, shorts, char, boolean
+		non: string, array, class.
+
+2. how to run java : programe -->  byte cote --> jvm --> machine code ---> output
+
+Jvm : Java vertual machine
+JRE : JVM + classLiberaries
+JDK : JRE + debuggers + documents + compilers
+
+
+3. class - templete for object for ex: blueprint of home
+   object - instance of class ex: actual home
+
+
+ 
+4. oops -
+encapsulation - data hiding, attributes declared private, and then getter - read the value, setter is defined - set the value.
+ex: private long bank customer no;
+
+//getter
+public long getbank customer no() {
+return bank customer no;
+}
+
+//setter
+public void setbank customer no(long newcusno)
+{
+this.bank customer no=newcusno;
+}
+
+
+
+5. abstraction - data hiding and show only essestial details: abstract class and abstract method  : extend  ; ex: car : gear,starring,color but inside the functionalities hiding
+
+   interface : implements : multilevel support : method declaration only 
+
+
+6. inheritance : parent child class : child class accuring the parent class details : code reusabilty : extend
+single
+hirarical
+multilevel
+
+
+multiple
+
+
+polymorphism
+ constructor :
+method overloading : same name, same class but differnt arguments
+method overriding  : same name, same arguments but differnt class
+
+exception handling-1.using try catch block
+				
+				try
+				   {
+				     //risky code
+				   }
+                                catch(exception name ref)
+				   {
+				      //alternate code 
+				   }
+
+
+
+                  2.using throws keyword
+
+Multithread :
+ - Multithreading is a programming concept where multiple threads execute independently within a single process, enabling concurrent execution of tasks to improve performance and responsiveness.
+
+
+final:
+
+
+collections
+1.Arraylist
+2.Linkedlist
+3.iterator
+set
+vector
+hashset
+likedhashset
+treeset
+queue
+
+
+lamda expression
+
+Map:
+
+-  map (also known as a dictionary or associative array) is an abstract data type that stores a collection of key-value pairs, where each key is unique, and the values can be accessed, inserted, or deleted based on their associated keys.
+
+Hashmap:
+
+- HashMap is a data structure in Java that stores key-value pairs and allows fast retrieval and insertion operations based on the keys. It uses a hash table to efficiently map keys to their corresponding values.
+
+
+enum:
+- Enum is a Java data type that represents a fixed set of constants, providing a way to define and work with a predefined list of named values.
+
+
+
+
+
+arraylist
+userinput
+hashmap
+map
+
+Lists:
+
+- Lists are linear data structures in computer science that store a collection of elements in a specific order, allowing efficient access, insertion, and removal operations.
+
+itration :
+- Iteration is the process of repeatedly executing a set of instructions or accessing elements in a data structure, usually in a loop, to perform a specific task or operation.
+
+iteration vs lists:
+
+- Iteration is a process of repeatedly performing a set of instructions, while a list is a data structure that stores a collection of elements in a specific order. Iteration is a method of accessing elements in a list or any other data structure
+
+Git
+
+git init
+git config
+git add
+git status
+git commit -m 
+git remote url
+git push 
+git merge
+git branch
+git checkout -b 
+git -d
+git pull
+git clone
+git remote -v   //check url
+git fork   //
+
+
+
+Maven
+
+pluggins
+dependency
+pom
+lifecycles
+
+
+SpringBoot
+
+advantage of sb
+springboot architecture
+annotations
+@springboot applications-@configuration + @EnableAutoconfigurtion + @componentscan
+server
+
+
+
+
+Microservice
+
+
+
+
+
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-maven-project -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false

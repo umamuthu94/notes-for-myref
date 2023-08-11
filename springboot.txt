@@ -1,0 +1,4 @@
+springboot how it works internally
+springboot architecture
+annatations
+simple Api creates and how to it run

@@ -1,0 +1,108 @@
+Today, I planned how to use microservices in Spring Boot, and yesterday, I tried JDBC in Spring Boot. The example had an error, so I tried to recover from it. Additionally, I planned how to connect a simple H2 database.
+
+morning session i listen how to run microservice in sevice discovery application and what are the steps i do and how to it works
+
+-- I implemented a @GetMapping method to fetch EmpDetails by ID, using @RequestParam to get the ID from the URL and then calling the appropriate service method.
+
+-- I have already written a Java Spring Boot RESTful controller to handle create, read, update, and delete operations on employee data. Now, I am implementing an Employee Management System with an HTML form to enter employee details.
+
+-- I studied some basic concepts of JavaScript in order to connect to the employee management system.
+
+microservices are collection of independent services communicate through api's.
+
+today i go through to learn microservice how to work internally and  
+
+I have implemented a Spring REST controller for employee operations, including saving, updating, and listing employees. Additionally, I integrated with another microservice to fetch company details using RestTemplate.
+
+yesterday i have a error on jdbc in spring boot with using jdbc templete so i today i recover the error.
+
+
+--Today, I learned about microservices and how they work internally.
+
+--I implemented a Spring REST controller for employee operations, which includes functionalities for saving, updating, and listing employees. Moreover, I integrated it with another microservice to fetch company details using RestTemplate.
+
+--Yesterday, I encountered an error while using JDBC Template in Spring Boot. Today, I managed to fix the error.
+
+
+https://github.com/umamuthu94/springbootworks
+
+https://github.com/umamuthu94/JDBC---Springboot
+
+
+1/08/2023
+
+--  I implemented a @GetMapping method to fetch EmpDetails by Name, using @RequestParam to get the Name from the URL and then calling the appropriate service method and also I tried the code includes two Spring @GetMapping methods that retrieve lists of employee details starting with "Bala" and "R" respectively, using corresponding service methods. Each method is mapped to a specific URL ("/findByNameStartingWithBala" and "/findByNameStartingWithR") to handle HTTP GET requests.
+
+-- I have a task to create a Spring Boot application to manage employee records with CRUD operations. Additionally, I need to integrate a frontend page to interact with the application.
+
+https://github.com/umamuthu94/task1
+
+---------------
+
+- Created a REST API to fetch EmpDetails by Name.
+
+- Created a REST API that is used to find all employees whose names start with a given prefix.
+
+- Created a Spring Boot application to manage employee records with CRUD operations and I need to integrate a frontend page.
+
+https://github.com/umamuthu94/task1
+
+----------------------
+
+
+28-07-2023
+
+
+-- I tried to connect one Rest Api's to another one Microservices using  WebClient.
+-- Gone through Java concepts Array and Collections.
+
+------------------
+
+springboot basic concepts,annotations, springboot architecture, how springboot application internally works, springboot actuator
+
+
+
+--------------------
+
+02-08-2023
+
+- Learn basic API architecture and URL terminologies (protocol, domain, port, resource path, query string, fragment identifier).
+
+- Learn HTTP requests and HTTP responses, including status codes.
+
+- Yesterday created a Spring Boot application to manage employee records with CRUD operations and today implementing an HTML form.
+
+https://github.com/umamuthu94/task1
+
+
+----------------------------------
+
+03-08-2023
+
+- I have revised the Java concept of exception handling.
+
+- Gone through the concepts of Spring Boot.
+
+- Tried the exception handling methods in Spring Boot REST APIs. 
+https://github.com/umamuthu94/task1
+
+------------------------------------
+
+07-08-2023
+
+- created a springboot applications with H2 databae.
+
+- revised git and maven concepts
+https://github.com/umamuthu94/H2-Spring-Boot
+
+-------------------------------------
+
+08-08-2023
+
+- gone through git concepts
+
+- created a Spring Boot application and then attempted to apply a Git stash to that application. 
+https://github.com/umamuthu94/my-git-work-repo
+
+------------------------------------------------ 
+

@@ -1,0 +1,34 @@
+@Service
+public class EmpService{
+
+@Autowired
+Emprepo empRepo
+
+//post service logic
+public EmpDetails saveEmployee(EmpDetails empDetails) {
+EmpDetails empDetails2 = empRepo.save(empDetails);
+return empDetails2;
+}
+
+
+//get
+public List<EmpDetails> getAllEmployees() {
+return empRepo.findAll();
+}
+
+
+//delete
+public void deleteEmployee(Integer id) {
+empRepo.deleteById(id);
+}
+
+//getbyid
+public EmpDetails getDetailsById(Integer id) {
+EmpDetails empDetails3 = empRepo.find(empDetails).orElse(null);
+return empDetails3;
+}
+
+//getbyname
+
+
+

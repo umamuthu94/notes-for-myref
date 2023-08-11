@@ -1,0 +1,3 @@
+collection - collection of objects
+
+array - collection of similar datatypes 

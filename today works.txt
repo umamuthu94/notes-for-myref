@@ -1,0 +1,27 @@
+Git - Intermediate
+Maven - Intermediate
+Java - Basic 
+Springboot -Basic 
+
+
+Today status
+What is Microservices?
+How it works?
+
+concepts
+--------
+1.today i learned about the basics of microservices and how it works and also worked on Spring boot using http methods and try to connect Spring boot CRUD with jdbc template 
+practicing 
+----------
+2. springboot application .<github url>
+
+
+I have an intermediate level of experience in Git and Maven, and my Java and Spring Boot skills are at a basic level.
+
+I have an intermediate level of proficiency in Git and Maven, both at 65%. My Java skills are at a basic level with 
+50% proficiency, and my Spring Boot skills are also at a basic level.
+
+ https://github.com/umamuthu94/JDBC---Springboot.git
+
+
+
