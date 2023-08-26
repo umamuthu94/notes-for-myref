@@ -1,0 +1,58 @@
+QUARKUS:
+========
+
+
+- Quarkus is a Java framework for building cloud-native apps with fast startup and low memory use. It offers native compilation, extensions for various features, and is well-suited for microservices and serverless architectures.
+
+
+Advantage of Quarkus:
+=====================
+
+- Quarkus offers advantages like ultra-fast startup, minimal memory consumption, native compilation, streamlined development with extensions, and compatibility with microservices and serverless architectures.
+
+Why we use Quarkus:
+===================
+- Quarkus is used to build Java applications with lightning-fast startup times, low memory usage, and native compilation for efficient resource utilization. It's ideal for modern cloud-native environments, microservices, and serverless architectures, offering developer-friendly features and Kubernetes-native capabilities.
+
+What is Panache:
+================
+
+- Panache is a Quarkus extension that simplifies data access by providing a concise API atop Hibernate ORM, reducing boilerplate and offering type-safe queries for efficient database operations in Java applications.
+
+
+ What is Annotation and why we use Anotation?
+=============================================
+
+- Annotation is a special kind of metadata in Java. It starts with the @ symbol and is used to provide additional information about code elements, like classes or methods.
+
+- We use annotations to give instructions or hints to the compiler, runtime, or other tools about how to handle our code. They help in configuration, documentation, testing, and integrating with frameworks, making coding tasks easier and more efficient.
+
+
+@ApplicationScoped: This annotation is used to mark a class as an application-scoped bean. Application-scoped beans have a lifecycle tied to the application and are instantiated once per application.
+
+@RequestScoped: An annotation to indicate that a bean's scope is tied to an HTTP request. This means that a new instance of the bean will be created for each incoming request.
+
+@SessionScoped: Used for beans that have a scope tied to an HTTP session. A single instance of the bean is created and associated with a user's session.
+
+@Path: This annotation is part of the JAX-RS specification and is used to define the base URI path for a REST endpoint.
+
+@GET, @POST, @PUT, @DELETE, etc.: These annotations are used in conjunction with the @Path annotation to specify the HTTP methods that a REST endpoint handles.
+
+@Inject: This annotation is used to indicate that a bean requires injection of a particular resource or service, such as a database connection or another bean.
+
+@ConfigProperty: Used to inject configuration values from property files or environment variables into a bean.
+
+@Produces: An annotation used in CDI (Contexts and Dependency Injection) to define a producer method for creating instances of a bean.
+
+@Consumes: Used in JAX-RS to specify the media types that a REST endpoint can consume.
+
+@Produces(MediaType.TEXT_PLAIN): Specifies the media type produced by a REST endpoint.
+
+@Transactional: Marks a method or class for transaction management. This is often used when working with databases or other transactional resources.
+
+@Scheduled: Used to define methods that should be executed on a scheduled basis.
+
+build(): return response to user
+
+500 -> internal server error
+404 -> notfound the data

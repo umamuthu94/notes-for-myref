@@ -1,0 +1,51 @@
+Collections:
+===========
+
+collection is a group of individual objects.
+
+
+interface - implementation
+
+java.util.package we used
+
+
+iterable - using a for-each loop or an explicit iterator.
+
+Interfaces :
+============
+
+Collection: The root interface that represents a group of objects.
+List: Ordered collection (allows duplicates).
+Set: Unordered collection (no duplicates).
+Map: Key-value pairs (no duplicate keys).
+
+
+classes :
+=========
+
+ArrayList: A dynamic array implementation of the List interface.
+LinkedList: A doubly-linked list implementation of the List interface.
+HashSet: A hash-based implementation of the Set interface.
+HashMap: A hash-based implementation of the Map interface.
+
+
+List <T> al = new ArrayList<> (); 
+List <T> ll = new LinkedList<> (); 
+List <T> v = new Vector<> (); 
+Where T is the type of the object 
+
+
+Queue <T> pq = new PriorityQueue<> (); 
+Queue <T> ad = new ArrayDeque<> (); 
+Where T is the type of the object. 
+
+Set<T> hs = new HashSet<> (); 
+Set<T> lhs = new LinkedHashSet<> (); 
+Set<T> ts = new TreeSet<> (); 
+Where T is the type of the object. 
+
+
+Map<T> hm = new HashMap<> (); 
+Map<T> tm = new TreeMap<> ();
+
+

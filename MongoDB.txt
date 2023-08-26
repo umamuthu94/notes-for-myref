@@ -1,0 +1,15 @@
+MongoDB:
+========
+
+* MongoDB is a popular open-source, NoSQL database that stores data in a document-oriented format. Unlike traditional relational databases, which store data in tables.
+
+* MongoDB stores data as JSON-like documents,making it more flexible and scalable.
+
+* The name "MongoDB" is derived from the word "humongous" (veryBig)
+
+
+* BSON documents are the format used for data stored in MongoDb 
+
+* JSON - JavaScript Object Notation
+
+ 

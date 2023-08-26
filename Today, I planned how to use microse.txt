@@ -106,3 +106,10 @@ https://github.com/umamuthu94/my-git-work-repo
 
 ------------------------------------------------ 
 
+14-08-2023
+
+- Gone through collections(ArrayList,LinkedList,Queue,Set,Map,HashMap)
+
+- Created a SpringBoot applications that connects with MongoDB.
+https://github.com/umamuthu94/SpringBoot-MongoDB
+

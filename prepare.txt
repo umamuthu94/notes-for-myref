@@ -1,0 +1,162 @@
+prepare:
+=======
+
+1.difference of argument and parameter:
+=======================================
+
+- parameter is a variable listed in the function or method declaration and They define the input requirements for the function.
+
+void printMessage(String message) {
+    System.out.println(message);
+}
+
+message is a parameter of the printMessage method
+
+- argument is the actual value that is passed to a function or method when it is invoked.Arguments are the specific data you pass to a function to be processed or used.
+
+String greeting = "Hello, world!";
+printMessage(greeting);
+
+greeting is the argument that is passed to the printMessage method when it's called.
+
+
+2. POM :
+========
+	(XML code is a Maven Project Object Model (POM) file for a Java project that uses the
+    	Quarkus framework for building and running reactive applications)
+
+(i) reactive:
+	Reactive applications are designed for quick, scalable responses to many requests at once, making them great for real-time data, scalability, and smooth user experiences.
+
+
+(ii) 	- <project> element is the root element of the POM file.
+
+	- <groupId> represents the group or organization that the project belongs to.
+
+	- <artifactId> identifies the specific project or module within the group.
+	
+	- BOM (Bill of Materials)
+
+	- <scope>import</scope> --->  <scope> element specifies the scope of the dependency, such as provided (dependencies used during compilation but provided at runtime) and test (dependencies used for testing).
+
+	- quarkus-resteasy-reactive-jackson -->  JSON serialization and deserialization while taking advantage of Quarkus' reactive capabilities for improved performance and responsiveness.
+
+	- quarkus-hibernate-orm ---> ORM (Object-Relational Mapping) --->  interact with databases using Java objects and annotations instead of writing raw SQL queries. This makes database operations more convenient, readable, and maintainable.
+
+	- ---> quarkus-smallrye-openapi ---> used for documentation, client code generation. By adding this dependency Quarkus application to automatically generate an OpenAPI documentation for your REST endpoints.
+
+	- quarkus-resteasy-reactive --->  develop reactive RESTful web services in your application. 
+
+	- Lombok --> Lombok is a Java library that simplifies the creation of Java classes by automatically generating boilerplate code like getters, setters, constructors, and more. It reduces the need for writing repetitive code and helps make code more concise and readable.
+
+	- quarkus-hibernate-orm-panache --->  data access layer when working with JPA and Hibernate. The Panache pattern offers more concise and expressive ways to perform CRUD (Create, Read, Update, Delete) operations and queries on your entities while abstracting away a lot of the boilerplate code traditionally associated with these tasks.
+
+	- quarkus-jdbc-postgresql
+
+	- quarkus-arc --->  CDI (Contexts and Dependency Injection) programming model, which is a key feature in Java EE and Jakarta EE for managing component lifecycles and dependencies and bean management.
+
+	- "quarkus-junit5" --> dependency with a "test" scope is included in the project to enable testing using.
+
+	- rest-assured ---> library with the purpose of performing API testing, particularly for testing RESTful APIs. 
+
+	- <quarkus-maven-plugin> is the core plugin for building Quarkus applications. It's used to build and generate code.
+
+	- <jacoco-maven-plugin> is used for code coverage analysis. It prepares the agent, generates coverage reports, and checks coverage against defined rules.
+
+	- <maven-compiler-plugin> is used to configure the Java compiler, including setting compiler arguments.
+
+	- <maven-surefire-plugin> and <maven-failsafe-plugin> are used for running tests and integration tests.
+
+project expalnation:
+===================
+
+1.Entity class: --> The class is designed to represent data related to booking tickets. 
+===============
+
+TicketBook class representing ticket booking data, annotated as a JPA entity with fields for ticket number, mobile number, ticket price, count, and total amount. Lombok annotations auto-generate common methods, and PanacheEntity simplifies JPA operations for this Quarkus application.
+
+2. repository class: ---> connected to database --> implements PanacheRepository
+====================
+
+public TicketBook findByMobileNumber(Long mobileno) {: This is a method definition for a custom query operation. The method is used to find a "TicketBook" entity by its mobile number.
+
+return find("mobileno", mobileno).firstResult();: This line uses the find() method provided by Panache to execute a query based on the "mobileno" attribute, which matches the provided mobile number. The .firstResult() method returns the first matching result.
+
+	-@ApplicationScoped annotation indicates that instances of this class will be managed by the application's CDI (Contexts and Dependency Injection) container.
+
+	@ApplicationScoped annotation defines the scope of a managed bean to be shared across the entire application, providing a singleton instance with a longer lifecycle.
+
+3.Service class:
+================
+
+	- @Inject annotation is used for Dependency Injection, allowing the container to provide dependencies to classes automatically.
+
+	- @Transactional annotation simplifies the management of database transactions by handling transactional behavior automatically.
+	@Transactional, the operations ensure proper database transaction management, preventing data inconsistencies and ensuring that changes are applied as a single unit.
+
+	-createTicketBook method calculates the total amount based on ticket count and persists the booking.
+
+	- getallTicketBooks method retrieves all ticket booking records.
+
+	- getTicketDetailsByMobileNumber method retrieves booking details using the mobile number.
+
+	- updateTicketBook method updates ticket count and total amount for a booking.
+
+	- deleteTicketByMobileNumber method deletes a booking based on the mobile number.
+
+4. Controller: ---> TicketResource that handles various HTTP methods for managing ticket bookings. 
+==============
+
+	- @Path("/book"), indicating that the base URL for these endpoints starts with "/book".
+
+	- @Produces and @Consumes annotations specify that the controller produces and consumes JSON data.
+
+	- 500 (Internal Server Error) and 404 no data found
+
+5. service and serviceimplementation:
+=====================================
+
+
+	- A service represents an abstract, high-level definition of a functionality or business logic that your application provides.
+
+	- service interface from its implementation follows the principle of abstraction and helps in achieving loose coupling between different parts of your application. This makes it easier to change or extend the behavior of the service without affecting other parts of the code.
+
+	- try-catch statement is used in programming to handle exceptions, which are unexpected or exceptional conditions that can occur during the execution of code.
+
+test:
+=====
+
+	- @Test and @Order(5): This annotation marks the method as a test case, and the @Order(5) annotation indicates the order of execution among other test cases if needed.
+
+Long mobileno = 77839373L;: Assigns a specific mobile number to be used in the test.
+
+TicketBook updateTicketBook = new TicketBook();: Creates a new instance of the TicketBook class to represent the updated ticket book information.
+
+updateTicketBook.setTicketcount(1);: Sets the ticket count in the updateTicketBook instance to 1. This simulates updating the ticket count.
+
+The given() section:
+
+pathParam("mobileno", mobileno): Sets the path parameter mobileno with the specified value.
+body(updateTicketBook): Sets the request body to the updateTicketBook object, which contains the new ticket count.
+contentType(ContentType.JSON): Specifies that the content type of the request is JSON.
+The when() section:
+
+put("/book/update/{mobileno}"): Sends a PUT request to the specified API endpoint to update the ticket book entry associated with the given mobile number.
+The then() section:
+
+
+The .extract().body().as(TicketBook.class) part of the test case is used to extract the response body of the HTTP request and convert it into an instance of the TicketBook class. Let's break it down:
+
+.extract(): This method is used to extract various parts of the HTTP response, such as headers, cookies, and the response body.
+
+.body(): This is used to specify that you want to extract the response body.
+
+.as(TicketBook.class): This part specifies the class into which the response body should be converted. In this case, it's TicketBook.class, indicating that the response body should be converted into an instance of the TicketBook class.
+
+
+
+
+
+
+
+
